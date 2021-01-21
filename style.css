@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'Anton', sans-serif;
+    font-family: 'Anton';
     src: url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
   }
   
@@ -24,13 +24,13 @@
     letter-spacing: 2;
     left: 50%;
     top: 50%;
-    font-family: "Clip";
+    font-family: "Anton";
     text-transform: uppercase;
     font-size: 6em;
     color: #ffe6ff;
-    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff6565,
+    text-shadow: 0 0 0.6rem #ffe6e6, 0 0 1.5rem #ee0707,
       -0.2rem 0.1rem 1rem #f13232, 0.2rem 0.1rem 1rem #ff3737,
-      0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2424;
+      0 -0.5rem 2rem #db1717, 0 0.5rem 3rem #ff2424;
     animation: shine 2s forwards, flicker 3s infinite;
   }
   
@@ -40,18 +40,18 @@
     36%,
     75% {
       color: #ffe6ff;
-      text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
-        -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
-        0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+      text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #fd4343,
+        -0.2rem 0.1rem 1rem #eb1919, 0.2rem 0.1rem 1rem #f85252,
+        0 -0.5rem 2rem #ff2424, 0 0.5rem 3rem #ff2424;
     }
     28%,
     33% {
-      color: #ff65bd;
+      color: #f13c3c;
       text-shadow: none;
     }
     82%,
     97% {
-      color: #ff2483;
+      color: #ff2424;
       text-shadow: none;
     }
   }
@@ -66,14 +66,14 @@
   
   @keyframes shine {
     0% {
-      color: #6b1839;
+      color: #ac1717;
       text-shadow: none;
     }
     100% {
       color: #ffe6ff;
-      text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
-        -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
-        0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+      text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #e63333,
+        -0.2rem 0.1rem 1rem #f33535, 0.2rem 0.1rem 1rem #f32929,
+        0 -0.5rem 2rem #ff2424, 0 0.5rem 3rem #ff2424;
     }
   }
   
