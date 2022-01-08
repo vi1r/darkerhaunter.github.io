@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>darkerhaunter</title>
+</head>
+<style>
+   /* Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+/* Global */
+.wrapper{
+  position: fixed;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.link_wrapper{
+  position: relative;
+}
+
+a{
+  display: block;
+  width: 250px;
+  height: 50px;
+  line-height: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  background: #333;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 3px solid #333;
+  transition: all .35s;
+}
+
+.icon{
+  width: 50px;
+  height: 50px;
+  border: 3px solid transparent;
+  position: absolute;
+  transform: rotate(45deg);
+  right: 0;
+  top: 0;
+  z-index: -1;
+  transition: all .35s;
+}
+
+.icon svg{
+  width: 30px;
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+  transform: rotate(-45deg);
+  fill: #ffffff;
+  transition: all .35s;
+}
+
+a:hover{
+  width: 200px;
+  border: 3px solid #ffffff;
+  background: transparent;
+  color: #fbfbfb;
+}
+
+a:hover + .icon{
+  border: 3px solid #ffffff;
+  right: -25%;
+}
+.title{
+    color: white;
+    text-align: center;
+}
+html{
+  min-height: 100%;
+  overflow: hidden;
+}
+body{
+  height: calc(100vh - 8em);
+  padding: 4em;
+  color: rgba(255,255,255,.75);
+  font-family: 'Anonymous Pro', monospace;  
+  background-color: rgb(25,25,25);  
+}
+.line-1{
+    position: relative;
+    top: 30%;  
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+#disc{
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 95%;
+    left: 1%;
+   
+}
+.copynoti{
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 93.5%;
+    left: 2%;   
+    display: none;
+}
+.enlarged {
+    width: 400px;
+    height: 300px;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 9em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+  </style>
+ <h1 class="title">I'm darkerhaunter</h1>
+  <div class="container">
+    <p class="line-1 anim-typewriter">A commission dev</p>
+  </div>
+  <div class="wrapper">
+    <div class="link_wrapper">
+      <a href="/services.html">Services</a>
+      <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.832 268.832">
+          <path d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 0-4.882 4.882-4.882 12.796 0 17.678l58.66 58.66H12.5c-6.903 0-12.5 5.598-12.5 12.5 0 6.903 5.597 12.5 12.5 12.5h213.654l-58.66 58.662c-4.88 4.882-4.88 12.796 0 17.678 2.44 2.44 5.64 3.66 8.84 3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882 4.883-12.796 0-17.678z"/>
+        </svg>
+      </div>
+    </div>
+    
+  </div>
+<div id="social">
+    <img id="disc" src="/discord.png" onclick="copyToClipboard('darkerhaunter#0001')">
+    <p id="ntf" class="copynoti">Copied!</p>
+</div>
+
+<body>
+    
+</body>
+<script>
+var copied=document.getElementById("ntf");
+function copyToClipboard(text) {
+    var dummy = document.createElement("textarea");
+    // to avoid breaking orgain page when copying more words
+    // cant copy when adding below this code
+    // dummy.style.display = 'none'
+    document.body.appendChild(dummy);
+    //Be careful if you use texarea. setAttribute('value', value), which works with "input" does not work with "textarea". – Eduard
+    dummy.value = text;
+    dummy.select();
+    document.execCommand("copy");
+    document.body.removeChild(dummy);
+    ntf.style.display="block";   
+}
+
+
+</script>
+
+</html>

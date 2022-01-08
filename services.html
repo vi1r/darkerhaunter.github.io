@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reveal Website Elements On Scroll</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <section>
+      <h1>All services offered:</h1>
+    </section>
+    <section>
+      <div class="container reveal">
+        <h2>//Coming soon</h2>
+        <div class="cards">
+          <div class="text-card">
+            <h3>//Coming soon!</h3>
+            <p>Contact me on discord for more details</p>
+          </div>
+          <div class="text-card">
+            <h3>//Coming soon!</h3>
+            <p>Contact me on discord for more details</p>
+          </div>
+          <div class="text-card">
+            <h3>//Coming soon!</h3>
+            <p>Contact me on discord for more details</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="social">
+        <img id="disc" src="/discord.png" onclick="copyToClipboard('darkerhaunter#0001')">
+        <p id="ntf" class="copynoti">Copied!</p>
+    </div>
+    
+    <script>
+        var copied=document.getElementById("ntf");
+        function copyToClipboard(text) {
+            var dummy = document.createElement("textarea");
+            // to avoid breaking orgain page when copying more words
+            // cant copy when adding below this code
+            // dummy.style.display = 'none'
+            document.body.appendChild(dummy);
+            //Be careful if you use texarea. setAttribute('value', value), which works with "input" does not work with "textarea". – Eduard
+            dummy.value = text;
+            dummy.select();
+            document.execCommand("copy");
+            document.body.removeChild(dummy);
+            ntf.style.display="block";   
+        }
+        
+        
+        </script>
+
+    <script type="text/javascript">
+    window.addEventListener('scroll', reveal);
+
+    function reveal(){
+      var reveals = document.querySelectorAll('.reveal');
+
+      for(var i = 0; i < reveals.length; i++){
+
+        var windowheight = window.innerHeight;
+        var revealtop = reveals[i].getBoundingClientRect().top;
+        var revealpoint = 150;
+
+        if(revealtop < windowheight - revealpoint){
+          reveals[i].classList.add('active');
+        }
+        else{
+          reveals[i].classList.remove('active');
+        }
+      }
+    }
+    </script>
+
+  </body>
+</html>
+      
